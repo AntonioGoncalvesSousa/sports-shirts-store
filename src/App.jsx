@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import Home from './pages/Home/home'
 
 function App() {
   return (
-    <h1>Sports Shirts Store</h1>
+    <Home />
   )
 }
 
