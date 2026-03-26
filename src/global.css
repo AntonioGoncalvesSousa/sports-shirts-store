@@ -1,6 +1,61 @@
 :root {
-    --color-blue: #2F8CD0;
+    --color-black: #0F0F0F;
+    --color-white: #F5F5F7;
+    --color-gray: #E5E5E5;
+    --color-blue: #2D6CDF;
     --color-purple: #6A4BC3;
-    --color-white: #FFFFFF;
-    --color-black: #000000;
+    --color-light-blue: #4EA1FF;
+}
+
+.color-black {
+    color: var(--color-black);
+}
+
+.back-black {
+    background-color: var(--color-black);
+}
+
+.color-white {
+    color: var(--color-white);
+}
+
+.back-white {
+    background-color: var(--color-white);
+}
+
+.color-gray {
+    color: var(--color-gray);
+}
+
+.back-gray {
+    background-color: var(--color-gray);
+}
+
+.color-blue {
+    color: var(--color-blue);
+}
+
+.back-blue {
+    background-color: var(--color-blue);
+}
+
+.color-purple {
+    color: var(--color-purple);
+}
+
+.back-purple {
+    background-color: var(--color-purple);
+}
+
+.color-light-blue {
+    color: var(--color-light-blue);
+}
+
+.back-light-blue {
+    background-color: var(--color-light-blue);
+}
+
+.imageBanner:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
