@@ -1,10 +1,16 @@
 :root {
-    --color-black: #0F0F0F;
+    --color-black: #000000;
     --color-white: #F5F5F7;
     --color-gray: #E5E5E5;
+    --color-purple: #5A3DB0;
     --color-blue: #2D6CDF;
-    --color-purple: #6A4BC3;
     --color-light-blue: #4EA1FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .color-black {
@@ -58,4 +64,46 @@
 .imageBanner:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translateX(1000%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.rotating-text {
+    animation: rotate 60s linear infinite;
+}
+
+.bg-stadium {
+    background-image: url('./assets/back/stadiumBack.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: scroll;
+}
+
+.cards {
+    gap: 10em;
+    animation: spin 20s linear infinite;
+    padding-right: 10em;
+    transition: animation-duration 2s ease;
+}
+
+.carousel:hover .cards {
+    animation-play-state: paused;
+}
+
+@keyframes spin {
+    from {
+        translate: 0;
+    }
+    to {
+        translate: -100%;
+    }
 }
