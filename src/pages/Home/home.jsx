@@ -43,16 +43,16 @@ function Home() {
     ];
 
     return (
-        <div className='overflow-x-hidden'>
+        <div className='overflow-x-hidden bg-stadium h-[300vh]'>
             <Navbar />
             <div className='h-16'></div>
-            <div className='bg-stadium h-[300vh] back-gray flex flex-col items-center gap-1 py-1'>
+            <div className=' flex flex-col items-center gap-1 py-1'>
                 <div className='w-full h-[70vh] flex flex-col gap-7 items-center justify-center overflow-hidden mt-10'>
                     <div className='flex justify-center'>
                         <h1 className='color-black font-bold text-3xl'>Destaques</h1>
                     </div>
                     <div className='h-[60vh] w-[100vw] items-center flex'>
-                        <div className='carousel overflow-hidden flex items-center relative'>
+                        <div className='carousel flex items-center relative'>
                             <ul className='cards flex shrink-0'>
                                 {products.map((product) => (
                                     <ProductCard key={product.id} product={product} />

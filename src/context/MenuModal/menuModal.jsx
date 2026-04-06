@@ -6,30 +6,34 @@ function MenuModal({ isOpen, onClose }) {
 
     return createPortal(
         <div className="fixed inset-0 z-[100]">
-            <div className="absolute inset-0 bg-black/50" onClick={onClose}>
-            </div>
-            <div className="absolute right-0 top-0 h-[17vh] flex flex-col justify-around rounded-md w-[35vw] bg-white shadow-lg p-6">
-                <div className="w-full h-[1vh] flex justify-end">
+
+            {/* Overlay escuro */}
+            <div
+                className="absolute inset-0 bg-black/50"
+                onClick={onClose}
+            ></div>
+
+            {/* Modal esquerda */}
+            <div className="absolute left-0 top-0 h-screen w-[35vw] back-white shadow-lg p-4">
+                <div className="m-3">
                     <button onClick={onClose} className=" hover:text-gray-600 transition-colors font-bold">
                         FECHAR
                     </button>
                 </div>
+                <div className="w-full h-[2px] back-black"></div>
                 <div>
-                    <h3>Oque você está procurando?</h3>
-                </div>
-                <div className="flex w-full">
-                    <input type="text"
-                        placeholder="Procurar"
-                        className="border border-gray-500 color-black placeholder:text-black h-[6vh] rounded-l-md px-3 py-2 w-full"
-                    />
-                    <button className="back-black text-white h-[6vh] px-4 py-2 rounded-r-md hover:bg-gray-800 transition-colors font-bold">
-                        Procurar
-                    </button>
+                    <ul className="flex flex-col gap-4 mt-4">
+                        <li className="cursor-pointer hover:text-gray-500 transition-colors ml-2">Camisas</li>
+                        <li className="cursor-pointer hover:text-gray-500 transition-colors ml-2">Shorts</li>
+                        <li className="cursor-pointer hover:text-gray-500 transition-colors ml-2">Nacionais</li>
+                        <li className="cursor-pointer hover:text-gray-500 transition-colors ml-2">Internacionais</li>
+                    </ul>
                 </div>
             </div>
+
         </div>,
         document.body
-    )
+    );
 }
 
 export default MenuModal;

@@ -88,6 +88,15 @@
     background-attachment: scroll;
 }
 
+.login-bg {
+    background-image: url('./assets/logo/mainLogo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: scroll;
+    filter: blur(3px);
+}
+
 .cards {
     gap: 10em;
     animation: spin 20s linear infinite;
@@ -107,3 +116,4 @@
         translate: -100%;
     }
 }
+
